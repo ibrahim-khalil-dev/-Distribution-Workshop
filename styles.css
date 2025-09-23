@@ -1,0 +1,743 @@
+/* CSS Custom Properties */
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --accent-color: #007bff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #999999;
+  --red-accent: #f0522d;
+  --border-color: #e0e0e0;
+  --max-width: 1200px;
+  --footer-bg: #4a4a4a;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Updated font families to use Ruda as primary and Plus Jakarta Sans as secondary */
+body {
+  font-family: "Ruda", sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--secondary-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+/* Added styles for logo image */
+.logo-img {
+  height: 32px;
+  width: auto;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Header Right */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.write-link {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.lang-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-btn span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 500px;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+/* Updated hero image styles to use img tag */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Movie Info Section */
+.movie-info {
+  background-color: var(--secondary-color);
+  padding: 0;
+}
+
+.movie-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  min-height: 600px;
+}
+
+/* Movie Poster */
+.movie-poster {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 60px;
+  z-index: 10;
+}
+
+/* Updated poster styles to use img tag */
+.poster-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Added styles for text below poster */
+.poster-info {
+  background-color: var(--secondary-color);
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Movie Details */
+.movie-details {
+  flex: 1;
+  padding: 36px 34px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.movie-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.meta-label {
+  font-size: 16px;
+  color: var(--accent-color);
+  font-weight: 400;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.meta-value {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Updated teaser button styles with play icon */
+.teaser-btn {
+  background-color: var(--red-accent);
+  color: var(--secondary-color);
+  border: none;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  width: 90px;
+  margin: 36px 0px;
+  margin-top: 45px;
+}
+
+.play-icon {
+  font-size: 12px;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red; /* force red icon */
+}
+
+.play-icon::before {
+  content: "▶";
+  position: absolute;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffece8;
+}
+
+/* Added section heading styles with blue dividers */
+.section-heading {
+  font-size: 18px;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 4px;
+  background-color: var(--accent-color);
+}
+.section-heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.main-heading.section-heading::after {
+  width: 120px;
+}
+
+/* Synopsis styles */
+.synopsis-section {
+  margin-bottom: 40px;
+}
+
+.synopsis-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Awards section on right side */
+.awards-section-right {
+  margin-bottom: 40px;
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.award-item {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.award-link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.award-link:hover {
+  text-decoration: underline;
+}
+
+/* Stills section on right side */
+.stills-section-right {
+  margin-bottom: 40px;
+}
+
+.stills-grid {
+     display: grid
+;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 170px);
+    gap: 8px;
+}
+
+.still-item {
+  height: 150px;
+  border: 2px solid var(--accent-color);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ 
+.still-img {
+  width: 100%;
+  height: 100px;  
+}
+ 
+
+/* Info section styles */
+.info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-title {
+  font-size: 14px;
+  color: var(--red-accent);
+  font-weight: 500;
+}
+
+.info-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Related News section styles */
+.news-section {
+  background-color: var(--secondary-color);
+  padding: 60px 0;
+   
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.news-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-title {
+  font-size: 16px;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.news-date {
+  font-size: 14px;
+  color: var(--text-light);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Updated Footer styles */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--secondary-color);
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo-img {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.footer-contact {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--secondary-color);
+}
+
+.copyright {
+  font-size: 12px;
+  color: #999;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav {
+    gap: 30px;
+  }
+
+  .movie-poster {
+    flex: 0 0 300px;
+  }
+
+  .poster-img {
+    height: 300px;
+  }
+
+  .movie-details {
+    padding: 40px 30px;
+  }
+
+  .movie-title {
+    font-size: 32px;
+  }
+
+  .stills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 60px);
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    height: 70px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .header-right {
+    gap: 20px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .movie-content {
+    flex-direction: column;
+  }
+
+  .movie-poster {
+    flex: none;
+    width: 100%;
+  }
+
+  .poster-img {
+    height: 300px;
+  }
+
+  .movie-details {
+    padding: 30px 20px;
+  }
+
+  .movie-title {
+    font-size: 28px;
+  }
+
+  .meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .meta-label {
+    min-width: auto;
+    font-size: 13px;
+  }
+
+  .meta-value {
+    font-size: 13px;
+  }
+
+  .stills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .large-still {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-right {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .header-content {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .header-right {
+    gap: 15px;
+  }
+
+  .write-link,
+  .lang-link {
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  .movie-poster {
+    height: 250px;
+  }
+
+  .movie-details {
+    padding: 20px 15px;
+  }
+
+  .movie-title {
+    font-size: 24px;
+  }
+
+  .meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .meta-label {
+    min-width: auto;
+    font-size: 13px;
+  }
+
+  .meta-value {
+    font-size: 13px;
+  }
+
+  .stills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-section-right,
+  .stills-section-right,
+  .news-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    height: 600px;
+  }
+
+  .movie-poster {
+    flex: 0 0 450px;
+    height: 450px;
+  }
+
+  .movie-details {
+    padding: 80px 50px;
+  }
+
+  .movie-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  .meta-item {
+    gap: 25px;
+  }
+
+  .meta-label {
+    font-size: 18px;
+    min-width: 90px;
+  }
+
+  .meta-value {
+    font-size: 18px;
+  }
+}
