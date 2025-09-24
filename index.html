@@ -11,9 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ruda:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body >
+  <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
@@ -21,8 +26,24 @@
           <!-- Logo -->
           <div class="logo">
             <!-- Using img tag for logo instead of placeholder circles -->
-            <img src="assets/6cc Logo 1.png" alt="66CC Logo" class="logo-img" />
-            <span class="logo-text">66CC</span>
+            <a
+              href="/index.html"
+              style="
+                text-decoration: none;
+                color: #333333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+              "
+            >
+              <img
+                src="assets/6cc Logo 1.png"
+                alt="66CC Logo"
+                class="logo-img"
+              />
+              <span class="logo-text">66CC</span></a
+            >
           </div>
 
           <!-- Navigation -->
@@ -197,14 +218,14 @@
               <div class="stills-grid">
                 <div class="still-item">
                   <img
-                    src="assets/500b221a73509ae017cdfd2e15e02288082d0f5c.jpg"
+                    src="assets/image.jpg"
                     alt="Movie Still 1"
                     class="still-img"
                   />
                 </div>
                 <div class="still-item">
                   <img
-                    src="assets/824c8cf85040395a280aba9a89d549d521db5df2.jpg"
+                    src="assets/f19d799b5b495e07d15af77a7fc707752b683248.jpg"
                     alt="Movie Still 2"
                     class="still-img"
                   />
@@ -218,7 +239,7 @@
                 </div>
                 <div class="still-item">
                   <img
-                    src="assets/a3f31a759ee797f57a7d494c80b01909c8f48d75.png"
+                    src="assets/500b221a73509ae017cdfd2e15e02288082d0f5c.jpg"
                     alt="Movie Still 4"
                     class="still-img"
                   />
@@ -232,7 +253,7 @@
                 </div>
                 <div class="still-item large-still">
                   <img
-                    src="assets/f19d799b5b495e07d15af77a7fc707752b683248.jpg"
+                    src="assets/824c8cf85040395a280aba9a89d549d521db5df2.jpg"
                     alt="Movie Still 6"
                     class="still-img"
                   />
@@ -244,11 +265,13 @@
               <h2 class="section-heading main-heading">Related News</h2>
               <div class="news-grid">
                 <article class="news-item">
-                  <img
-                    src="assets/824c8cf85040395a280aba9a89d549d521db5df2.jpg"
-                    alt="News 1"
-                    class="news-img"
-                  />
+                  <div class="news-items-img">
+                    <img
+                      src="assets/ef4c43a6b317b7d11b60b710033c0540d71ad38e.png"
+                      alt="News 1"
+                      class="news-img"
+                    />
+                  </div>
                   <div class="news-content">
                     <h3 class="news-title">
                       Juno Mak on His Star-Driven Cannes Midnight Screenings
@@ -259,11 +282,13 @@
                   </div>
                 </article>
                 <article class="news-item">
-                  <img
-                    src="assets/ddbba64f7286610fa35cce04304a9f6c6a1467ba.jpg"
-                    alt="News 2"
-                    class="news-img"
-                  />
+                  <div class="news-items-img">
+                    <img
+                      src="assets/ec5f86af876cf500af0f6eeb04a80d6e89ffdabc.png"
+                      alt="News 2"
+                      class="news-img"
+                    />
+                  </div>
                   <div class="news-content">
                     <h3 class="news-title">
                       Juno Mak on Taking Ten Years to Direct Hong Kong's Most
@@ -274,11 +299,14 @@
                   </div>
                 </article>
                 <article class="news-item">
-                  <img
-                    src="assets/ef4c43a6b317b7d11b60b710033c0540d71ad38e.png"
-                    alt="News 3"
-                    class="news-img"
-                  />
+                  <div class="news-items-img">
+                    <img
+                      src="assets/image.jpg"
+                      alt="News 3"
+                      class="news-img"
+                    />
+                  </div>
+
                   <div class="news-content">
                     <h3 class="news-title">
                       Distribution Workshop To Launch Sales On Juno Mak's 'Sons
@@ -296,20 +324,34 @@
 
     <!-- Updated Footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="containers">
         <div class="footer-content">
           <div class="footer-left">
             <div class="footer-logo">
-              <img
-                src="assets/6cc Logo 1.png"
-                alt="66CC Logo"
-                class="footer-logo-img"
-              />
-              <span class="footer-logo-text">66CC</span>
+              <a
+                href="/"
+                style="
+                  text-decoration: none; 
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 5px;
+                "
+              >
+                <img
+                  src="assets/6cc Logo 1.png"
+                  alt="66CC Logo"
+                  class="footer-logo-img"
+                />
+                <span class="footer-logo-text" style="font-weight: 1000;">66CC</span></a
+              >
             </div>
             <div class="footer-contact">
               <p>Tel: +886 (02) 2742-5407</p>
-              <p>Mail: sales@justcreative.studio</p>
+              <p>
+                Mail:
+                <span class="golden-color"> sales@justcreative.studio</span>
+              </p>
               <br />
               <p>Address: 3F, No.251, Sec. 2, Xinyi Rd.,</p>
               <p>Zhongzheng Dist., Taipei City 100048, Taiwan (R.O.C.)</p>
@@ -317,13 +359,25 @@
           </div>
           <div class="footer-right">
             <div class="social-links">
-              <a href="#" class="social-link">f</a>
-              <a href="#" class="social-link">tw</a>
-              <a href="#" class="social-link">ig</a>
-              <a href="#" class="social-link">yt</a>
-              <a href="#" class="social-link">in</a>
-              <a href="#" class="social-link">tg</a>
-              <a href="#" class="social-link">IMDb</a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-vimeo"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fas fa-film"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-imdb"></i
+              ></a>
             </div>
             <p class="copyright">
               © 2025 All Rights Reserved by Distribution Workshop (BVI) Ltd
@@ -334,7 +388,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="utils.js"></script>
-
+    <!-- <script src="utils.js"></script> -->
   </body>
 </html>
