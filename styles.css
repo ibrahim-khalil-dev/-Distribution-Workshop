@@ -171,7 +171,7 @@ body {
 /* Added styles for text below poster */
 .poster-info {
   background-color: var(--secondary-color);
-  padding: 30px 0px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -621,7 +621,7 @@ body {
   }
 
   .poster-img {
-    height: 300px;
+    height: auto;
   }
 
   .movie-details {
@@ -707,11 +707,12 @@ body {
   }
 
   .movie-poster {
-    height: 420px;
+    height: auto;
   }
 
   .movie-details {
     padding: 20px 0px;
+    padding-top: 0px;
   }
 
   .movie-title {
