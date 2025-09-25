@@ -212,53 +212,96 @@
             </div>
 
             <!-- Added Stills section on right side -->
+            <!-- Stills Section with Carousel for Mobile -->
             <div class="stills-section-right">
               <h3 class="section-heading">Stills</h3>
-              <div class="stills-grid">
-                <div class="still-item">
-                  <img
-                    src="assets/image.jpg"
-                    alt="Movie Still 1"
-                    class="still-img"
-                  />
+
+              <!-- Carousel Container for Mobile -->
+              <div class="stills-carousel-container">
+                <!-- Navigation Arrows -->
+                <button
+                  class="carousel-arrow carousel-prev"
+                  aria-label="Previous image"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M15 18L9 12L15 6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  class="carousel-arrow carousel-next"
+                  aria-label="Next image"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 6L15 12L9 18"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Stills Grid/Carousel -->
+                <div class="stills-grid">
+                  <div class="still-item">
+                    <img
+                      src="assets/image.jpg"
+                      alt="Movie Still 1"
+                      class="still-img"
+                    />
+                  </div>
+                  <div class="still-item">
+                    <img
+                      src="assets/f19d799b5b495e07d15af77a7fc707752b683248.jpg"
+                      alt="Movie Still 2"
+                      class="still-img"
+                    />
+                  </div>
+                  <div class="still-item">
+                    <img
+                      src="assets/67dc307b9f8898741da528638986d9b4456aa6e8.jpg"
+                      alt="Movie Still 3"
+                      class="still-img"
+                    />
+                  </div>
+                  <div class="still-item">
+                    <img
+                      src="assets/500b221a73509ae017cdfd2e15e02288082d0f5c.jpg"
+                      alt="Movie Still 4"
+                      class="still-img"
+                    />
+                  </div>
+                  <div class="still-item">
+                    <img
+                      src="assets/ddbba64f7286610fa35cce04304a9f6c6a1467ba.jpg"
+                      alt="Movie Still 5"
+                      class="still-img"
+                    />
+                  </div>
+                  <div class="still-item large-still">
+                    <img
+                      src="assets/824c8cf85040395a280aba9a89d549d521db5df2.jpg"
+                      alt="Movie Still 6"
+                      class="still-img"
+                    />
+                  </div>
                 </div>
-                <div class="still-item">
-                  <img
-                    src="assets/f19d799b5b495e07d15af77a7fc707752b683248.jpg"
-                    alt="Movie Still 2"
-                    class="still-img"
-                  />
-                </div>
-                <div class="still-item">
-                  <img
-                    src="assets/67dc307b9f8898741da528638986d9b4456aa6e8.jpg"
-                    alt="Movie Still 3"
-                    class="still-img"
-                  />
-                </div>
-                <div class="still-item">
-                  <img
-                    src="assets/500b221a73509ae017cdfd2e15e02288082d0f5c.jpg"
-                    alt="Movie Still 4"
-                    class="still-img"
-                  />
-                </div>
-                <div class="still-item">
-                  <img
-                    src="assets/ddbba64f7286610fa35cce04304a9f6c6a1467ba.jpg"
-                    alt="Movie Still 5"
-                    class="still-img"
-                  />
-                </div>
-                <div class="still-item large-still">
-                  <img
-                    src="assets/824c8cf85040395a280aba9a89d549d521db5df2.jpg"
-                    alt="Movie Still 6"
-                    class="still-img"
-                  />
+
+                <!-- Dots Indicator for Mobile -->
+                <div class="carousel-dots">
+                 
                 </div>
               </div>
             </div>
+
             <!-- Added Related News section -->
             <section class="news-section">
               <h2 class="section-heading main-heading">Related News</h2>
@@ -385,6 +428,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="carasoul.js"></script>
     <!-- <script src="utils.js"></script>  -->
   </body>
 </html>

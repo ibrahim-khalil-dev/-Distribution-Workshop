@@ -781,3 +781,140 @@ body {
     font-size: 18px;
   }
 }
+
+/* Mobile Carousel Styles - Only for screens 768px and below */
+@media (max-width: 768px) {
+  /* Convert stills grid to carousel container on mobile */
+  .stills-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Transform grid to horizontal carousel */
+  .stills-grid {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: 0;
+  }
+
+  /* Each still item takes full width in carousel */
+  .still-item {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 250px;
+
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .still-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Navigation arrows styling */
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-prev {
+    left: 0px;
+  }
+
+  .carousel-next {
+    right: 0px;
+  }
+  .carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .carousel-arrow svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Dots indicator styling */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  /* Hide arrows and dots on desktop */
+  .carousel-arrow,
+  .carousel-dots {
+    display: none;
+  }
+}
+
+/* Show carousel controls only on mobile */
+@media (max-width: 768px) {
+  .carousel-arrow,
+  .carousel-dots {
+    display: flex;
+  }
+}
+
+/* Smooth animations */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Touch feedback */
+@media (max-width: 768px) {
+  .stills-carousel-container:active .stills-grid {
+    transition: transform 0.1s ease;
+  }
+}
+
+ 
