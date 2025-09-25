@@ -5,7 +5,7 @@
   --accent-color: #0b80c4;
   --golden-color: #fbae17;
   --text-primary: #333333;
-  --text-secondary: #666666;
+  --text-secondary: #7a7a7a;
   --text-light: #999999;
   --red-accent: #f0522d;
   --border-color: #e0e0e0;
@@ -74,8 +74,9 @@ body {
 .nav-link {
   text-decoration: none;
   color: var(--text-primary);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
   transition: color 0.3s ease;
 }
 
@@ -95,13 +96,18 @@ body {
   color: var(--accent-color);
   font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .lang-link {
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
   text-decoration: none;
   color: var(--text-primary);
   font-size: 16px;
-  font-weight: 800;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 /* Mobile Menu Button */
@@ -180,7 +186,7 @@ body {
 /* Movie Details */
 .movie-details {
   flex: 1;
-  padding: 30px 38px;
+  padding: 25px 38px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -219,7 +225,7 @@ body {
   font-size: 15px;
   color: var(--text-secondary);
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 18px;
 }
 
 /* Updated teaser button styles with play icon */
@@ -227,15 +233,15 @@ body {
   background-color: var(--red-accent);
   color: var(--secondary-color);
   border: none;
-  height: 30px;
+  height: 26px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
-  width: 90px;
-  margin: 36px 0px;
+  width: 96px;
+  margin: 30px 0px;
   margin-top: 45px;
 }
 
@@ -269,7 +275,7 @@ body {
   font-size: 20px;
   color: var(--accent-color);
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   position: relative;
   padding-bottom: 6px;
 }
@@ -294,24 +300,26 @@ body {
 }
 
 .main-heading.section-heading::after {
-  width: 120px;
+  width: 300px;
 }
 
 /* Synopsis styles */
 .synopsis-section {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .synopsis-text {
   font-size: 15px;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 24px;
+  letter-spacing: 0px;
+  font-weight: 500;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* Awards section on right side */
 .awards-section-right {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .awards-list {
@@ -321,7 +329,9 @@ body {
 
 .award-item {
   font-size: 15px;
+  line-height: 20px;
   color: var(--text-secondary);
+  font-weight: 400;
 }
 
 .award-link {
@@ -347,13 +357,15 @@ body {
 
 .still-item {
   height: 150px;
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.movie-details {
+  padding-bottom: 60px;
+}
 .still-img {
   width: 100%;
   height: 100%;
@@ -423,7 +435,7 @@ body {
   font-size: 18px;
   color: var(--text-primary);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 20px;
   transition: all 2s ease-in-out;
 }
 .golden-color {
@@ -434,7 +446,7 @@ body {
   font-size: 14px;
   color: var(--footer-bg);
 
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* Updated Footer styles */
@@ -456,7 +468,7 @@ body {
   width: 1200px;
 }
 .containers {
-  height: 280px;
+  height: 295px;
   max-width: 1200px;
   display: flex;
   justify-content: center;
@@ -474,7 +486,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  bottom: 30px;
+  bottom: 20px;
   position: relative;
 }
 
@@ -527,42 +539,6 @@ body {
   font-size: 12px;
   color: var(--text-light);
   font-family: "Ruda", sans-serif;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  .nav {
-    gap: 30px;
-  }
-
-  .movie-poster {
-    flex: 0 0 300px;
-  }
-
-  .poster-img {
-    height: 300px;
-  }
-
-  .movie-details {
-    padding: 40px 30px;
-  }
-
-  .movie-title {
-    font-size: 32px;
-  }
-
-  .stills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 60px);
-  }
-
-  .news-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
@@ -676,8 +652,13 @@ body {
     align-items: flex-start;
   }
 }
-
+.none {
+  display: none;
+}
 @media (max-width: 480px) {
+  .none {
+    display: flex;
+  }
   .container {
     padding: 0 12px;
   }
@@ -746,39 +727,6 @@ body {
 
   .section-title {
     font-size: 20px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .hero {
-    height: 600px;
-  }
-
-  .movie-poster {
-    flex: 0 0 450px;
-    height: 450px;
-  }
-
-  .movie-details {
-    padding: 80px 50px;
-  }
-
-  .movie-title {
-    font-size: 42px;
-    margin-bottom: 40px;
-  }
-
-  .meta-item {
-    gap: 25px;
-  }
-
-  .meta-label {
-    font-size: 18px;
-    min-width: 90px;
-  }
-
-  .meta-value {
-    font-size: 18px;
   }
 }
 
@@ -916,5 +864,3 @@ body {
     transition: transform 0.1s ease;
   }
 }
-
- 
