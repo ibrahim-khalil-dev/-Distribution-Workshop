@@ -334,9 +334,9 @@ body {
 }
 
 /* Stills section on right side */
-.stills-section-right {
+/* .stills-section-right {
   margin-bottom: 40px;
-}
+} */
 
 .stills-grid {
   display: grid;
