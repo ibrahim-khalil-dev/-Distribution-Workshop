@@ -47,11 +47,22 @@
                 <span class="logo-text">66CC</span></a
               >
             </div>
+
             <a href="#" class="nav-link">Lineup</a>
             <a href="#" class="nav-link">News</a>
             <a href="#" class="nav-link">Markets</a>
             <a href="#" class="nav-link">Library</a>
-            <a href="#" class="nav-link">Company Profile</a>
+            <div class="nav-dropdown">
+              <a href="#" class="nav-link dropdown-toggle">Company Profile</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">About Us</a>
+                <a href="#" class="dropdown-item">Our Team</a>
+                <a href="#" class="dropdown-item">History</a>
+                <a href="#" class="dropdown-item">Mission & Vision</a>
+                <a href="#" class="dropdown-item">Awards</a>
+                <a href="#" class="dropdown-item">Contact</a>
+              </div>
+            </div>
             <a href="#" class="nav-link">Subscribe</a>
           </nav>
 
@@ -213,91 +224,63 @@
 
             <!-- Added Stills section on right side -->
             <!-- Stills Section with Carousel for Mobile -->
-            <div class="stills-section-right">
-              <h3 class="section-heading">Stills</h3>
-
-              <!-- Carousel Container for Mobile -->
+            <div class="stills-section">
+              <h2 class="stills-title">Stills</h2>
               <div class="stills-carousel-container">
-                <!-- Navigation Arrows -->
-                <button
-                  class="carousel-arrow carousel-prev none"
-                  aria-label="Previous image"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M15 18L9 12L15 6"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                <button class="carousel-nav carousel-prev" id="prevBtn">
+                  ‹
                 </button>
-
-                <button
-                  class="carousel-arrow carousel-next none"
-                  aria-label="Next image"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M9 6L15 12L9 18"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-
-                <!-- Stills Grid/Carousel -->
-                <div class="stills-grid">
-                  <div class="still-item">
-                    <img
-                      src="assets/image.jpg"
-                      alt="Movie Still 1"
-                      class="still-img"
-                    />
-                  </div>
-                  <div class="still-item">
-                    <img
-                      src="assets/f19d799b5b495e07d15af77a7fc707752b683248.jpg"
-                      alt="Movie Still 2"
-                      class="still-img"
-                    />
-                  </div>
-                  <div class="still-item">
-                    <img
-                      src="assets/67dc307b9f8898741da528638986d9b4456aa6e8.jpg"
-                      alt="Movie Still 3"
-                      class="still-img"
-                    />
-                  </div>
-                  <div class="still-item">
-                    <img
-                      src="assets/500b221a73509ae017cdfd2e15e02288082d0f5c.jpg"
-                      alt="Movie Still 4"
-                      class="still-img"
-                    />
-                  </div>
-                  <div class="still-item">
-                    <img
-                      src="assets/ddbba64f7286610fa35cce04304a9f6c6a1467ba.jpg"
-                      alt="Movie Still 5"
-                      class="still-img"
-                    />
-                  </div>
-                  <div class="still-item large-still">
+                <div class="stills-carousel-wrapper">
+                  <div class="stills-grid" id="stillsGrid">
+                    <div class="still-item">
+                      <img
+                        src="assets/image.jpg"
+                        alt="Still 1"
+                        class="still-img"
+                      />
+                    </div>
+                    <div class="still-item">
+                      <img
+                        src="assets/f19d799b5b495e07d15af77a7fc707752b683248.jpg"
+                        alt="Still 2"
+                        class="still-img"
+                      />
+                    </div>
+                    <div class="still-item">
+                      <img
+                        src="assets/67dc307b9f8898741da528638986d9b4456aa6e8.jpg"
+                        alt="Still 3"
+                        class="still-img"
+                      />
+                    </div>
+                    <div class="still-item">
+                      <img
+                        src="assets/500b221a73509ae017cdfd2e15e02288082d0f5c.jpg"
+                        alt="Still 4"
+                        class="still-img"
+                      />
+                    </div>
+                    <div class="still-item">
+                      <img
+                        src="assets/ddbba64f7286610fa35cce04304a9f6c6a1467ba.jpg"
+                        alt="Still 5"
+                        class="still-img"
+                      />
+                    </div>
+                     <div class="still-item large-still">
                     <img
                       src="assets/824c8cf85040395a280aba9a89d549d521db5df2.jpg"
                       alt="Movie Still 6"
                       class="still-img"
                     />
+
                   </div>
                 </div>
-
-                <!-- Dots Indicator for Mobile -->
-                <div class="carousel-dots"></div>
+                <button class="carousel-nav carousel-next" id="nextBtn">
+                  ›
+                </button>
               </div>
+              <div class="carousel-dots" id="carouselDots"></div>
             </div>
 
             <!-- Added Related News section -->
