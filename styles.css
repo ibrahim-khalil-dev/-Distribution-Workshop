@@ -2,7 +2,7 @@
 :root {
   --primary-color: #000000;
   --secondary-color: #ffffff;
-  --accent-color: #007bff;
+  --accent-color: #0b80c4;
   --golden-color: #fbae17;
   --text-primary: #333333;
   --text-secondary: #666666;
@@ -68,14 +68,14 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--text-primary);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -94,7 +94,7 @@ body {
   text-decoration: none;
   color: var(--accent-color);
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .lang-link {
@@ -153,7 +153,7 @@ body {
 
 /* Movie Poster */
 .movie-poster {
-  flex: 0 0 260px;
+  flex: 0 0 266px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -180,7 +180,7 @@ body {
 /* Movie Details */
 .movie-details {
   flex: 1;
-  padding: 36px 34px;
+  padding: 30px 38px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -199,7 +199,6 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  gap: 4px;
 }
 
 .meta-item {
@@ -209,7 +208,7 @@ body {
 }
 
 .meta-label {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--accent-color);
   font-weight: 400;
   min-width: 80px;
@@ -217,7 +216,7 @@ body {
 }
 
 .meta-value {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.4;
@@ -267,12 +266,12 @@ body {
 
 /* Added section heading styles with blue dividers */
 .section-heading {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--accent-color);
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 .section-heading::after {
@@ -304,7 +303,7 @@ body {
 }
 
 .synopsis-text {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.6;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -321,7 +320,7 @@ body {
 }
 
 .award-item {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
 }
 
@@ -368,13 +367,13 @@ body {
 }
 
 .info-title {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--red-accent);
   font-weight: 500;
 }
 
 .info-text {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
 }
 
@@ -421,7 +420,7 @@ body {
 }
 
 .news-title {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-primary);
   font-weight: 500;
   line-height: 1.4;
@@ -432,7 +431,7 @@ body {
 }
 
 .news-date {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--footer-bg);
 
   font-family: "Source Sans Pro", sans-serif;
@@ -493,7 +492,7 @@ body {
 
 .footer-contact {
   font-size: 12px;
-  line-height: 1.6;
+  line-height: 18px;
   color: var(--text-light);
   font-family: "Ruda", sans-serif;
 }
