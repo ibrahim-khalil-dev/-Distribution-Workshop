@@ -470,7 +470,7 @@ body {
 }
 .containers {
   height: 285px;
-  max-width: 1200px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
