@@ -549,7 +549,10 @@ body {
   .header-content {
     height: 70px;
   }
-
+  .footer-contact {
+    bottom: 40px;
+    position: relative;
+  }
   .nav {
     display: none;
     position: absolute;
