@@ -4,8 +4,8 @@
   --secondary-color: #ffffff;
   --accent-color: #0b80c4;
   --golden-color: #fbae17;
-  --text-primary: #333333;
-  --text-secondary: #7a7a7a;
+  --text-primary: #212721;
+  --text-secondary: #414042;
   --text-light: #999999;
   --red-accent: #f0522d;
   --border-color: #e0e0e0;
@@ -66,10 +66,9 @@ body {
 
 /* Navigation */
 .nav {
-  display: flex
-;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-link {
@@ -197,7 +196,7 @@ body {
   font-size: 30px;
   font-weight: 400;
   color: var(--text-primary);
-  line-height: 1.2;
+  line-height: 32px;
 }
 .logo-text {
   font-weight: 1000;
@@ -224,7 +223,7 @@ body {
 
 .meta-value {
   font-size: 15px;
-  color: var(--text-secondary);
+  color: #7a7a7a;
   font-weight: 400;
   line-height: 18px;
 }
@@ -248,13 +247,13 @@ body {
 
 .play-icon {
   font-size: 12px;
-  height: 30px;
+  height: 26px;
   width: 30px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: red; /* force red icon */
+  color: var(--red-accent);
 }
 
 .play-icon::before {
@@ -275,10 +274,12 @@ body {
 .section-heading {
   font-size: 20px;
   color: var(--accent-color);
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 18px;
   position: relative;
   padding-bottom: 6px;
+  line-height: 30px;
+  letter-spacing: 0px;
 }
 
 .section-heading::after {
@@ -286,7 +287,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 300px;
+  width: 285px;
   height: 4px;
   background-color: var(--accent-color);
 }
@@ -296,12 +297,12 @@ body {
   bottom: 0px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: var(--accent-color);
 }
 
 .main-heading.section-heading::after {
-  width: 300px;
+  width: 285px;
 }
 
 /* Synopsis styles */
@@ -310,8 +311,8 @@ body {
 }
 
 .synopsis-text {
-  font-size: 15px;
-  color: var(--text-secondary);
+  font-size: 14px;
+  color: #808080;
   line-height: 24px;
   letter-spacing: 0px;
   font-weight: 500;
@@ -331,7 +332,7 @@ body {
 .award-item {
   font-size: 15px;
   line-height: 20px;
-  color: var(--text-secondary);
+  color: #7a7a7a;
   font-weight: 400;
 }
 
@@ -434,9 +435,9 @@ body {
 
 .news-title {
   font-size: 18px;
-  color: var(--text-primary);
-  font-weight: 500;
-  line-height: 20px;
+  color: #212721;
+  font-weight: 400;
+  line-height: 22px;
   transition: all 2s ease-in-out;
 }
 .golden-color {
@@ -445,8 +446,7 @@ body {
 
 .news-date {
   font-size: 14px;
-  color: var(--footer-bg);
-
+  color: #212721;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -474,7 +474,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid var(--golden-color);
+  border-top: 2px solid #fbae17;
   padding: 0px 40px;
 }
 .footer-left {
@@ -506,7 +506,7 @@ body {
 .footer-contact {
   font-size: 12px;
   line-height: 18px;
-  color: var(--text-light);
+  color: #ababab;
   font-family: "Ruda", sans-serif;
 }
 
@@ -539,8 +539,10 @@ body {
 
 .copyright {
   font-size: 12px;
-  color: var(--text-light);
+  color: #ababab;
   font-family: "Ruda", sans-serif;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -737,7 +739,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 170px);
-    gap: 10px;
+    gap: 8px;
   }
 
   .carousel-nav,
@@ -888,13 +890,6 @@ body {
   position: relative;
 }
 
-.dropdown-toggle::after {
-  content: "▼";
-  font-size: 10px;
-  margin-left: 5px;
-  transition: transform 0.2s ease;
-}
-
 .nav-dropdown:hover .dropdown-toggle::after {
   transform: rotate(180deg);
 }
@@ -902,18 +897,19 @@ body {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  background: white;
+  left: 0px;
+  top: 50px;
+  background: var(--secondary-color);
   min-width: 200px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 10px 0;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
   z-index: 1000;
-  border: 1px solid #e0e0e0;
+  border: var(--border-color);
 }
 
 .nav-dropdown:hover .dropdown-menu {
@@ -925,7 +921,7 @@ body {
 .dropdown-item {
   display: block;
   padding: 12px 20px;
-  color: #333;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: background-color 0.2s ease;
   font-weight: 400;
