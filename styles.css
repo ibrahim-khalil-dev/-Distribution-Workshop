@@ -765,11 +765,13 @@ body {
 
   .stills-carousel-container {
     position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
+        width: 100%;
+        display: flex
+;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+        left: 15px;
   }
 
   .stills-carousel-wrapper {
@@ -856,7 +858,7 @@ body {
   }
 
   .carousel-prev {
-    left: -2%;
+    left: -7%;
   }
 
   .carousel-next {
