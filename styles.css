@@ -601,7 +601,7 @@ body {
   .movie-poster {
     flex: none;
     width: 100%;
-    padding: 20px 30px;
+    padding: 0px 20px;
   }
 
   .poster-img {
@@ -609,7 +609,7 @@ body {
   }
 
   .movie-details {
-    padding: 30px 20px;
+    padding: 0px 20px;
   }
 
   .movie-title {
@@ -699,6 +699,7 @@ body {
 
   .movie-poster {
     height: auto;
+    padding: 0px 0px;
   }
 
   .movie-details {
