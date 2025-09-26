@@ -66,9 +66,10 @@ body {
 
 /* Navigation */
 .nav {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+  display: flex
+;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-link {
@@ -730,141 +731,6 @@ body {
     font-size: 20px;
   }
 }
-
-/* Mobile Carousel Styles - Only for screens 768px and below */
-@media (max-width: 768px) {
-  /* Convert stills grid to carousel container on mobile */
-  .stills-carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  /* Transform grid to horizontal carousel */
-  .stills-grid {
-    display: flex;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform;
-    grid-template-columns: none;
-    grid-template-rows: none;
-    gap: 0;
-  }
-
-  /* Each still item takes full width in carousel */
-  .still-item {
-    flex: 0 0 100%;
-    width: 100%;
-    height: 250px;
-
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .still-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  /* Navigation arrows styling */
-  .carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    background: transparent;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .carousel-prev {
-    left: 0px;
-  }
-
-  .carousel-next {
-    right: 0px;
-  }
-  .carousel-arrow:active {
-    transform: translateY(-50%) scale(0.95);
-  }
-
-  .carousel-arrow svg {
-    width: 30px;
-    height: 30px;
-  }
-
-  /* Dots indicator styling */
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    padding: 0 20px;
-  }
-
-  /* Hide arrows and dots on desktop */
-  .carousel-arrow,
-  .carousel-dots {
-    display: none;
-  }
-}
-
-/* Show carousel controls only on mobile */
-@media (max-width: 768px) {
-  .carousel-arrow,
-  .carousel-dots {
-    display: flex;
-  }
-}
-
-/* Smooth animations */
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Touch feedback */
-@media (max-width: 768px) {
-  .stills-carousel-container:active .stills-grid {
-    transition: transform 0.1s ease;
-  }
-}
 /* Desktop Grid Layout */
 @media (min-width: 769px) {
   .stills-grid {
@@ -875,7 +741,8 @@ body {
   }
 
   .carousel-nav,
-  .carousel-dots {
+  .carousel-dots,
+  .carousel-arrow {
     display: none;
   }
 }
@@ -886,28 +753,44 @@ body {
     position: relative;
     width: 100%;
     padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .stills-carousel-container {
     position: relative;
     width: 100%;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
   }
 
   .stills-carousel-wrapper {
     width: 80%;
     overflow: hidden;
+    margin: 0 auto;
+    position: relative;
   }
 
   .stills-grid {
     display: flex;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: 0;
   }
 
   .still-item {
     flex: 0 0 100%;
     width: 100%;
+    height: 250px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .still-img {
@@ -948,6 +831,15 @@ body {
   .carousel-nav:active {
     transform: translateY(-50%) scale(0.95);
   }
+
+  /* Dots indicator styling */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
 }
 
 /* Small devices adjustments */
@@ -966,6 +858,8 @@ body {
     right: 1%;
   }
 }
+
+/* Navigation Styles */
 .main-nav {
   display: flex;
   align-items: center;
@@ -1038,30 +932,80 @@ body {
 }
 
 .dropdown-item:hover {
-  background-color: #f5f5f5;
-  color: #8bc34a;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
-/* Mobile Navigation Adjustments */
+/* Mobile Navigation Adjustments - Fixed dropdown behavior */
 @media (max-width: 768px) {
   .main-nav {
     flex-direction: column;
     gap: 15px;
   }
 
+  /* Keep dropdown hidden by default on mobile */
   .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    margin-top: 10px;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    background: transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: 1px solid #e0e0e0;
   }
 
-  .nav-dropdown:hover .dropdown-menu {
-    display: block;
+  /* Only show dropdown on hover/tap */
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth animations */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Touch feedback */
+@media (max-width: 768px) {
+  .stills-carousel-container:active .stills-grid {
+    transition: transform 0.1s ease;
   }
 }
