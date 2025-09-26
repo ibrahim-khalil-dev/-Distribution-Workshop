@@ -851,7 +851,7 @@ body {
   }
 
   .carousel-prev {
-    left: 1%;
+    left: -2%;
   }
 
   .carousel-next {
